@@ -1,5 +1,20 @@
 var dateDiffInDays = function (date1, date2) {
   //   write your code here
+  const firstDate = Date.UTC(...date1.split('-'));
+  const secondDate = Date.UTC(...date2.split('-'));
+
+  // Calculate the time difference in milliseconds
+  const timeDiff = Math.abs(secondDate - firstDate);
+
+  // Calculate the difference in days
+  const daysDiff = Math.ceil(timeDiff / (86400));
+
+  return daysDiff;
+
+	
+
+
+	
 };
 
 // Do not change the code below.
